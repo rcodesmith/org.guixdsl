@@ -1,0 +1,5 @@
+org.guixdsl.ui/bin
+org.guixdsl.tests/bin
+org.guixdsl/bin
+xtend-gen
+
