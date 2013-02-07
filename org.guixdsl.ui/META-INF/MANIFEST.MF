@@ -10,16 +10,16 @@ Require-Bundle: org.guixdsl;visibility:=reexport,
  org.eclipse.ui.editors;bundle-version="3.5.0",
  org.eclipse.ui.ide;bundle-version="3.5.0",
  org.eclipse.xtext.ui.shared,
- org.eclipse.xtext.xbase.ui,
  org.eclipse.ui,
  org.eclipse.xtext.builder,
  org.antlr.runtime,
  org.eclipse.xtext.common.types.ui,
  org.eclipse.xtext.ui.codetemplates.ui,
- org.eclipse.compare
+ org.eclipse.compare,
+ org.eclipse.xtext.xbase.ui
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: org.ui.contentassist,
- org.ui.contentassist.antlr,
- org.ui.internal
-Bundle-Activator: org.ui.internal.GuixDslActivator
+Export-Package: org.guixdsl.ui.contentassist,
+ org.guixdsl.ui.contentassist.antlr,
+ org.guixdsl.ui.internal
+Bundle-Activator: org.guixdsl.ui.internal.GuixdslActivator

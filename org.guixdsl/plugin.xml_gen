@@ -5,9 +5,9 @@
 
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
-       uri = "http://www.GuixDsl.org" 
-       class = "org.guixDsl.GuixDslPackage"
-       genModel = "org/GuixDsl.genmodel" /> 
+       uri = "http://www.guixdsl.org/Guixdsl" 
+       class = "org.guixdsl.guixdsl.GuixdslPackage"
+       genModel = "org/guixdsl/Guixdsl.genmodel" /> 
 	
   </extension>
 

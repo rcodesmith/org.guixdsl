@@ -1,0 +1,21 @@
+grammar org.guixdsl.Guixdsl with org.eclipse.xtext.xbase.Xbase
+
+generate guixdsl "http://www.guixdsl.org/Guixdsl"
+
+DslModel:
+    elements+=DslAbstractGuiElement*;
+ 
+DslAbstractGuiElement :
+    DslGuiModule | DslView;
+ 
+DslGuiModule:
+    (documentation=STRING)?
+    'Module' name=ID '{'
+        ("hint" "=" hint=STRING)?
+    '}';
+ 
+DslView:
+    (documentation=STRING)?
+    'View' name=ID '{'
+ 
+    '}';

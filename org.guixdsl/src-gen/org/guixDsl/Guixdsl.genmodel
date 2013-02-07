@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.guixdsl/src-gen" editDirectory="/org.guixdsl.edit/src"
+    editorDirectory="/org.guixdsl.editor/src" modelPluginID="org.guixdsl" forceOverwrite="true"
+    modelName="Guixdsl" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.guixdsl.edit"
+    editorPluginID="org.guixdsl.editor" runtimeVersion="2.8">
+  <genPackages prefix="Guixdsl" basePackage="org.guixdsl" disposableProviderFactory="true"
+      ecorePackage="Guixdsl.ecore#/">
+    <genClasses ecoreClass="Guixdsl.ecore#//DslModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Guixdsl.ecore#//DslModel/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="Guixdsl.ecore#//DslAbstractGuiElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Guixdsl.ecore#//DslAbstractGuiElement/documentation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Guixdsl.ecore#//DslAbstractGuiElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Guixdsl.ecore#//DslGuiModule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Guixdsl.ecore#//DslGuiModule/hint"/>
+    </genClasses>
+    <genClasses ecoreClass="Guixdsl.ecore#//DslView"/>
+  </genPackages>
+</genmodel:GenModel>
