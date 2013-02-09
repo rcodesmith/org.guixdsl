@@ -5,6 +5,7 @@ package org.guixdsl;
 
 import org.eclipse.xtext.generator.IGenerator;
 import org.guixdsl.generator.GuixdslGenerator;
+import org.guixdsl.generator.ActivityGenerator;
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
@@ -18,6 +19,10 @@ public class GuixdslRuntimeModule extends org.guixdsl.AbstractGuixdslRuntimeModu
     @Override
     public Class<? extends IGenerator> bindIGenerator() {
         return GuixdslGenerator.class;
+    }
+    
+    public Class<? extends ActivityGenerator> bindActivityGenerator() {
+        return ActivityGenerator.class;
     }
 
 }

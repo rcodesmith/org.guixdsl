@@ -3,13 +3,38 @@
  */
 package org.guixdsl.generator
 
+import com.google.inject.Inject
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
+import org.eclipse.xtext.naming.IQualifiedNameProvider
 import org.eclipse.xtext.xbase.compiler.JvmModelGenerator
+import org.eclipse.xtext.xbase.compiler.TypeReferenceSerializer
+import org.guixdsl.guixdsl.DslView
 
 class GuixdslGenerator extends JvmModelGenerator {
 	
+   @Inject extension IQualifiedNameProvider
+   @Inject extension GuixNames
+   @Inject extension ActivityGenerator
+   @Inject extension ViewGenerator
+   
+        
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
 		super.doGenerate(resource, fsa)
+		
+        for(e: resource.allContents.toIterable.filter(typeof(DslView))) {
+                
+            fsa.generateFile(
+                    e.fullyQualifiedName.toString("/") + ".java",
+                    e.generateViewImpl)
+                    
+            fsa.generateFile(
+                    e.fullyQualifiedViewImplName + ".java",
+                    e.generateViewIf)
+                    
+            generateActivityImpl(fsa, e)
+
+        }
 	}
+	
 }
