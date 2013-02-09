@@ -3,3 +3,5 @@ org.guixdsl.tests/bin
 org.guixdsl/bin
 xtend-gen
 
+org.guix.testproject/bin
+org.guixdsl.sample.extension/bin
