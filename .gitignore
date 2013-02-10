@@ -5,3 +5,4 @@ xtend-gen
 
 org.guix.testproject/bin
 org.guixdsl.sample.extension/bin
+org.guixdsl.sample.extension/src-gen
