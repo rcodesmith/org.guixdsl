@@ -15,25 +15,25 @@ class ViewGenerator {
 	
    @Inject extension IQualifiedNameProvider
    @Inject extension GuixNames
-   @Inject extension ActivityGenerator
+
 
     def generateViewImpl(DslView it) '''
 
-		«IF eContainer != null»
+		«IF hasPackage»
 			package «eContainer.fullyQualifiedName»;
         «ENDIF»
 
-		public class <AB>name<BB> {
+		public class «name» {
 
 		}
     '''
         
 	def generateViewIf(DslView it) '''
-		«IF eContainer != null»
+		«IF hasPackage»
 			package «eContainer.fullyQualifiedName»;
 		«ENDIF»
 
-		interface «name» {
+		interface «interfaceName» {
 		
 		}
 	'''

@@ -4,7 +4,12 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import org.guixdsl.GuixdslStandaloneSetup;
 
-public class UserAppStandaloneSetup extends GuixdslStandaloneSetup {
+/**
+ * XText standalone setup class, overridden to supply our own Guice runtime module
+ * @author ron
+ *
+ */
+public class SampleStandaloneSetup extends GuixdslStandaloneSetup {
 
 	@Override
 	public Injector createInjector() {

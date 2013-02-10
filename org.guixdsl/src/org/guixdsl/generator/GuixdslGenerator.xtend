@@ -20,7 +20,7 @@ class GuixdslGenerator extends JvmModelGenerator {
    
         
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-		super.doGenerate(resource, fsa)
+//		super.doGenerate(resource, fsa)
 		
         for(e: resource.allContents.toIterable.filter(typeof(DslView))) {
                 

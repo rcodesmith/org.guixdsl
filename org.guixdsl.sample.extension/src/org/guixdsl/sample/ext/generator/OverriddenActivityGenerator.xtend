@@ -11,9 +11,7 @@ import org.eclipse.xtext.xbase.compiler.JvmModelGenerator
 import org.eclipse.xtext.xbase.compiler.TypeReferenceSerializer
 
 class OverriddenActivityGenerator extends ActivityGenerator {
-	@Inject extension IQualifiedNameProvider
-	@Inject extension TypeReferenceSerializer 
-	
+
 	override CharSequence activityImplDoc(DslView it) '''
 		Overridden: Activity implementation for «name» view.
 	'''

@@ -12,7 +12,6 @@ import org.guixdsl.guixdsl.DslView
 class ActivityGenerator {
 	
 	@Inject extension IQualifiedNameProvider
-	@Inject extension TypeReferenceSerializer 
 	@Inject extension GuixNames
 
 	/**
@@ -29,7 +28,7 @@ class ActivityGenerator {
 	 */
 	def CharSequence activityImpl(DslView it) '''
 	
-		«IF eContainer != null»
+		«IF hasPackage»
 			package «eContainer.fullyQualifiedName»;
 		«ENDIF»
 
